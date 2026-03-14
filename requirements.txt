@@ -1,0 +1,6 @@
+customtkinter
+requests
+autopep8
+beautifulsoup4
+ordered-set
+zstandard

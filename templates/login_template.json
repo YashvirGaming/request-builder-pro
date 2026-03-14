@@ -1,0 +1,8 @@
+{
+    "success": "login_success",
+    "failure": "invalid password",
+    "retry": "too many requests",
+    "parse_type": "regex",
+    "parse_val1": "\"token\":\"(.*?)\"",
+    "parse_val2": ""
+}

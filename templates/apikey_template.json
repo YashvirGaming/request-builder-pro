@@ -1,0 +1,8 @@
+{
+  "success": "api_key",
+  "failure": "invalid",
+  "retry": "rate limit",
+  "parse_type": "json",
+  "parse_val1": "[\"api_key\"]",
+  "parse_val2": ""
+}

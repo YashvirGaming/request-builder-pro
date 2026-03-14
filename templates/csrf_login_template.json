@@ -1,0 +1,8 @@
+{
+  "success": "dashboard",
+  "failure": "invalid credentials",
+  "retry": "rate limit",
+  "parse_type": "lr",
+  "parse_val1": "csrf_token\":\"",
+  "parse_val2": "\""
+}

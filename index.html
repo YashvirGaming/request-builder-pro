@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Request Builder PRO — by Yashvir Gaming</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI',system-ui,sans-serif;background:#0d1117;color:#e6edf3;line-height:1.6}
+  a{color:#58a6ff;text-decoration:none}a:hover{text-decoration:underline}
+  code{font-family:'Consolas','Courier New',monospace;background:#161b22;border:1px solid #30363d;border-radius:4px;padding:2px 6px;font-size:12.5px;color:#e6edf3}
+  pre{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:16px;overflow-x:auto;margin:12px 0}
+  pre code{background:none;border:none;padding:0;font-size:13px}
+  .neon{color:#00fff7}.pink{color:#ff79c6}.green{color:#50fa7b}.yellow{color:#f1fa8c}.orange{color:#ffb86c}.red{color:#ff5555}.purple{color:#bd93f9}.dim{color:#6e7681}
+  .header{border-bottom:1px solid #21262d;padding:40px 48px 32px;text-align:center;position:relative;overflow:hidden}
+  .header::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#7b2fff,#00fff7,#ff2d78,#7b2fff)}
+  .header h1{font-size:34px;font-weight:700;letter-spacing:-0.5px;margin-bottom:6px}
+  .header p{color:#8b949e;font-size:15px;max-width:640px;margin:0 auto 20px}
+  .badges-row{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:16px}
+  .badge-pill{display:inline-block;padding:4px 14px;border-radius:20px;font-size:12px;font-weight:600;letter-spacing:.3px}
+  .bp-cyan{background:#003d45;color:#00fff7;border:1px solid #00fff7}
+  .bp-purple{background:#1e0e4a;color:#bd93f9;border:1px solid #7b2fff}
+  .bp-pink{background:#3d0020;color:#ff79c6;border:1px solid #ff2d78}
+  .bp-yellow{background:#3d3300;color:#f1fa8c;border:1px solid #ffe600}
+  .bp-gray{background:#161b22;color:#8b949e;border:1px solid #30363d}
+  .content{max-width:920px;margin:0 auto;padding:32px 48px}
+  h2{font-size:20px;font-weight:600;border-bottom:1px solid #21262d;padding-bottom:10px;margin:36px 0 16px}
+  p{color:#8b949e;font-size:14px;margin:8px 0}
+  ul{list-style:none;padding:0}
+  ul li{font-size:14px;color:#8b949e;padding:3px 0 3px 18px;position:relative}
+  ul li::before{content:'▸';position:absolute;left:0;color:#7b2fff;font-size:11px;top:5px}
+  .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}
+  .feature-card{background:#161b22;border:1px solid #21262d;border-radius:8px;padding:16px}
+  .feature-card h4{font-size:13px;font-weight:600;margin-bottom:4px}
+  .feature-card p{font-size:12px;color:#6e7681;margin:0}
+  .file-tree{background:#161b22;border:1px solid #21262d;border-radius:8px;padding:16px;font-family:'Consolas','Courier New',monospace;font-size:13px;line-height:1.9}
+  .ft-dir{color:#58a6ff}.ft-py{color:#50fa7b}.ft-bat{color:#ffb86c}.ft-txt{color:#8b949e}.ft-dim{color:#484f58}
+  .install-block{background:#0d1117;border:1px solid #30363d;border-radius:8px;overflow:hidden;margin:12px 0}
+  .install-header{background:#161b22;padding:8px 16px;font-size:12px;color:#6e7681;border-bottom:1px solid #21262d;display:flex;justify-content:space-between}
+  .install-body{padding:14px 16px;font-family:'Consolas',monospace;font-size:13px}
+  .cmd-prompt{color:#6e7681;user-select:none}.cmd-text{color:#50fa7b}
+  .module-table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13px}
+  .module-table th{text-align:left;padding:8px 12px;background:#161b22;color:#8b949e;font-weight:500;border-bottom:1px solid #21262d}
+  .module-table td{padding:8px 12px;border-bottom:1px solid #0d1117;vertical-align:top}
+  .module-table td:first-child{font-family:'Consolas',monospace;font-size:12px}
+  .module-table tr:hover td{background:#161b22}
+  .flow-row{display:flex;align-items:center;gap:0;margin:16px 0;flex-wrap:wrap}
+  .flow-step{background:#161b22;border:1px solid #21262d;border-radius:8px;padding:10px 16px;font-size:13px;white-space:nowrap}
+  .flow-step span{display:block;font-size:11px;color:#6e7681;margin-top:2px}
+  .flow-arrow{color:#30363d;font-size:20px;padding:0 8px;flex-shrink:0}
+  .credits-row{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}
+  .credit-chip{background:#161b22;border:1px solid #21262d;border-radius:20px;padding:6px 14px;font-size:12px;color:#8b949e}
+  .footer{border-top:1px solid #21262d;padding:24px 48px;text-align:center;color:#484f58;font-size:12px}
+  .footer .by{color:#00fff7;font-weight:600}
+  @media(max-width:700px){.feature-grid{grid-template-columns:1fr 1fr}.content{padding:24px 20px}.header{padding:32px 20px 24px}}
+</style>
+</head>
+<body>
+<div class="header">
+  <div style="font-size:12px;color:#484f58;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px">⬡ &nbsp; Yashvir Gaming &nbsp; ⬡</div>
+  <h1><span class="neon">Request</span><span style="color:#e6edf3"> Builder </span><span class="pink">PRO</span></h1>
+  <p>Universal HTTP request analyzer → cyberpunk Python checker generator. Paste any request from Chrome DevTools, HTTPDebugger, Burp Suite or cURL and get a full working multi-threaded checker in one click.</p>
+  <div class="badges-row">
+    <span class="badge-pill bp-cyan">Python 3.10+</span>
+    <span class="badge-pill bp-purple">CustomTkinter</span>
+    <span class="badge-pill bp-pink">Multi-threaded</span>
+    <span class="badge-pill bp-yellow">Proxy Support</span>
+    <span class="badge-pill bp-gray">MIT License</span>
+  </div>
+</div>
+
+<div class="content">
+
+  <h2>Features</h2>
+  <div class="feature-grid">
+    <div class="feature-card"><h4 class="neon">5 Input Parsers</h4><p>HAR, Burp Suite, HTTPDebugger XML, cURL, and raw HTTP — all auto-detected</p></div>
+    <div class="feature-card"><h4 class="pink">Smart Code Gen</h4><p>Detects email/pass fields, payload type, CSRF tokens — generates clean valid Python</p></div>
+    <div class="feature-card"><h4 class="purple">Checker GUI Output</h4><p>Generated script is a full cyberpunk CTk checker with combos, proxies, threads, stats</p></div>
+    <div class="feature-card"><h4 class="yellow">Session Chaining</h4><p>Auto-extracts CSRF tokens from login pages and injects them into POST requests</p></div>
+    <div class="feature-card"><h4 class="orange">Proxy Rotation</h4><p>ip:port and ip:port:user:pass formats, round-robin rotation per thread</p></div>
+    <div class="feature-card"><h4 class="green">Syntax Highlighting</h4><p>Generated code box uses a token-level Python highlighter — Dracula-style neon palette</p></div>
+  </div>
+
+  <h2>How it works</h2>
+  <div class="flow-row">
+    <div class="flow-step"><span class="neon">01</span>Paste Request<span>HAR / Burp / cURL / Raw</span></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step"><span class="pink">02</span>Configure<span>success · fail · retry · parse</span></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step"><span class="purple">03</span>Generate<span>click Generate Python Code</span></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step"><span class="yellow">04</span>Export &amp; Run<span>full checker .py ready to go</span></div>
+  </div>
+
+  <h2>Installation</h2>
+  <div class="install-block">
+    <div class="install-header"><span>terminal</span><span>bash</span></div>
+    <div class="install-body">
+      <div><span class="cmd-prompt">$ </span><span class="cmd-text">git clone https://github.com/yashvirgaming/request-builder-pro</span></div>
+      <div><span class="cmd-prompt">$ </span><span class="cmd-text">cd request-builder-pro</span></div>
+      <div><span class="cmd-prompt">$ </span><span class="cmd-text">pip install -r requirements.txt</span></div>
+      <div><span class="cmd-prompt">$ </span><span class="cmd-text">python main_gui.py</span></div>
+    </div>
+  </div>
+
+  <div class="install-block">
+    <div class="install-header"><span>requirements.txt</span></div>
+    <div class="install-body">
+      <div><span style="color:#ff79c6">customtkinter</span></div>
+      <div><span style="color:#50fa7b">requests</span></div>
+      <div><span style="color:#50fa7b">autopep8</span></div>
+      <div><span style="color:#50fa7b">beautifulsoup4</span></div>
+      <div><span style="color:#f1fa8c">ordered-set</span></div>
+      <div><span style="color:#f1fa8c">zstandard</span></div>
+    </div>
+  </div>
+
+  <h2>Project structure</h2>
+  <div class="file-tree">
+    <div><span class="ft-dim">📁 </span><span class="ft-dir">REQUEST BUILDER/</span></div>
+    <div><span class="ft-dim">│</span></div>
+    <div><span class="ft-dim">├── </span><span class="ft-py">main_gui.py</span>  <span class="ft-dim">  # main CTk application window</span></div>
+    <div><span class="ft-dim">│</span></div>
+    <div><span class="ft-dim">├── </span><span class="ft-dir">core/</span></div>
+    <div><span class="ft-dim">│   ├── </span><span class="ft-py">code_generator.py</span>  <span class="ft-dim">  # the main brain</span></div>
+    <div><span class="ft-dim">│   ├── </span><span class="ft-py">request_tester.py</span></div>
+    <div><span class="ft-dim">│   ├── </span><span class="ft-py">request_flow.py</span></div>
+    <div><span class="ft-dim">│   ├── </span><span class="ft-py">request_preview.py</span></div>
+    <div><span class="ft-dim">│   ├── </span><span class="ft-py">template_manager.py</span></div>
+    <div><span class="ft-dim">│   ├── </span><span class="ft-py">parsing_engine.py</span></div>
+    <div><span class="ft-dim">│   └── </span><span class="ft-py">formatter.py</span></div>
+    <div><span class="ft-dim">│</span></div>
+    <div><span class="ft-dim">├── </span><span class="ft-dir">parsers/</span></div>
+    <div><span class="ft-dim">│   ├── </span><span class="ft-py">har_parser.py</span></div>
+    <div><span class="ft-dim">│   ├── </span><span class="ft-py">burp_parser.py</span></div>
+    <div><span class="ft-dim">│   ├── </span><span class="ft-py">curl_parser.py</span></div>
+    <div><span class="ft-dim">│   ├── </span><span class="ft-py">raw_request_parser.py</span></div>
+    <div><span class="ft-dim">│   └── </span><span class="ft-py">http_debugger_xml_parser.py</span></div>
+    <div><span class="ft-dim">│</span></div>
+    <div><span class="ft-dim">├── </span><span class="ft-dir">utils/</span></div>
+    <div><span class="ft-dim">│   ├── </span><span class="ft-py">request_detector.py</span></div>
+    <div><span class="ft-dim">│   ├── </span><span class="ft-py">token_detector.py</span></div>
+    <div><span class="ft-dim">│   ├── </span><span class="ft-py">jwt_detector.py</span></div>
+    <div><span class="ft-dim">│   ├── </span><span class="ft-py">har_analyzer.py</span></div>
+    <div><span class="ft-dim">│   ├── </span><span class="ft-py">success_detector.py</span></div>
+    <div><span class="ft-dim">│   ├── </span><span class="ft-py">failure_detector.py</span></div>
+    <div><span class="ft-dim">│   └── </span><span class="ft-py">keyword_database.py</span></div>
+    <div><span class="ft-dim">│</span></div>
+    <div><span class="ft-dim">├── </span><span class="ft-dir">ui/</span></div>
+    <div><span class="ft-dim">│   ├── </span><span class="ft-py">code_viewer.py</span>  <span class="ft-dim">  # syntax highlighter widget</span></div>
+    <div><span class="ft-dim">│   └── </span><span class="ft-py">text_editor_utils.py</span></div>
+    <div><span class="ft-dim">│</span></div>
+    <div><span class="ft-dim">├── </span><span class="ft-dir">templates/</span>  <span class="ft-dim">  # 10 preset JSON templates</span></div>
+    <div><span class="ft-dim">├── </span><span class="ft-bat">Launcher.bat</span></div>
+    <div><span class="ft-dim">└── </span><span class="ft-txt">requirements.txt</span></div>
+  </div>
+
+  <h2>Generated checker features</h2>
+  <ul>
+    <li>Cyberpunk dark CTk GUI — <code>#050508</code> black, <code>#00fff7</code> neon, <code>#ff2d78</code> pink, <code>#7b2fff</code> purple</li>
+    <li>Animated pulse indicator — cycles frames while checker is running</li>
+    <li>Combo loader — <code>email:pass</code> format, skips malformed lines</li>
+    <li>Proxy loader — <code>ip:port</code> or <code>ip:port:user:pass</code>, round-robin per thread</li>
+    <li>Thread slider — 1 to 200 threads, live label</li>
+    <li>Stats board — Total / Hits / Bad / Retries / Errors / CPM</li>
+    <li>Progress bar with <code>done / total</code> counter</li>
+    <li>Output log — colour-coded: cyan=hit, red=bad, yellow=retry, pink=error</li>
+    <li>Hits written to timestamped <code>hits_YYYYMMDD_HHMMSS.txt</code> immediately on match</li>
+    <li>CSRF session chaining — auto-fetches token, injects into POST</li>
+    <li>Retry logic — reads <code>Retry-After</code> on 429, sleeps on 5xx, custom keyword triggers</li>
+    <li>All 6 parse modes — <code>json</code>, <code>lr</code>, <code>regex</code>, <code>css</code>, <code>xpath</code>, <code>jsonpath</code></li>
+    <li>Credits bar — 10 social links at the bottom of every generated window</li>
+  </ul>
+
+  <h2>Parse modes</h2>
+  <table class="module-table">
+    <thead><tr><th>Mode</th><th>Value 1</th><th>Value 2</th><th>Use case</th></tr></thead>
+    <tbody>
+      <tr><td class="neon">json</td><td>key name</td><td>—</td><td>Recursive key search in any JSON response</td></tr>
+      <tr><td class="pink">lr</td><td>left boundary</td><td>right boundary</td><td>Extract text between two strings</td></tr>
+      <tr><td class="purple">regex</td><td>pattern</td><td>—</td><td>Regex capture group 1 from response</td></tr>
+      <tr><td class="yellow">css</td><td>CSS selector</td><td>attribute (optional)</td><td>BeautifulSoup element extraction</td></tr>
+      <tr><td class="orange">xpath</td><td>XPath expression</td><td>—</td><td>lxml HTML tree extraction</td></tr>
+      <tr><td class="green">jsonpath</td><td>JSONPath expression</td><td>—</td><td>jsonpath-ng deep path matching</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Credits</h2>
+  <div class="credits-row">
+    <span class="credit-chip">▶ YouTube @therealyashvirgaming</span>
+    <span class="credit-chip">✈ Telegram Group</span>
+    <span class="credit-chip">💬 Telegram Bot</span>
+    <span class="credit-chip">🌍 Discord Server</span>
+    <span class="credit-chip">Instagram</span>
+    <span class="credit-chip">Facebook Group</span>
+    <span class="credit-chip">💲 Donate via PayPal</span>
+  </div>
+  <p style="margin-top:8px">Built and maintained by <span class="neon" style="font-weight:600">Yashvir Gaming</span> — 🔥 @therealyashvirgaming 🔥</p>
+
+</div>
+
+<div class="footer">
+  <div style="margin-bottom:6px">Released under the MIT License</div>
+  <div>Coded by <span class="by">Yashvir Gaming</span> &nbsp;·&nbsp; Request Builder PRO &nbsp;·&nbsp; 2025</div>
+</div>
+
+</body>
+</html>

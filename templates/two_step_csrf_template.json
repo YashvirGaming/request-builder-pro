@@ -1,0 +1,8 @@
+{
+  "success": "token, session, logged_in",
+  "failure": "invalid, error, denied",
+  "retry": "rate_limit, slow_down, retry_after",
+  "parse_type": "regex",
+  "parse_val1": "csrf[_-]?token[\"']?\\s*[=:]\\s*[\"']([^\"']+)",
+  "parse_val2": ""
+}

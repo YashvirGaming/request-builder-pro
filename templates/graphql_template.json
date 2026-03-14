@@ -1,0 +1,8 @@
+{
+  "success": "data",
+  "failure": "errors",
+  "retry": "rate_limit",
+  "parse_type": "regex",
+  "parse_val1": "\"token\":\"(.*?)\"",
+  "parse_val2": ""
+}

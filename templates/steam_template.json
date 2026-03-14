@@ -1,0 +1,8 @@
+{
+  "success": "success, eresult\":1",
+  "failure": "Incorrect login, eresult\":5",
+  "retry": "too many login failures",
+  "parse_type": "json",
+  "parse_val1": "steamid",
+  "parse_val2": ""
+}

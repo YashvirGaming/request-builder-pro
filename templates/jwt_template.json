@@ -1,0 +1,8 @@
+{
+  "success": "jwt",
+  "failure": "unauthorized",
+  "retry": "rate_limit",
+  "parse_type": "regex",
+  "parse_val1": "\"jwt\":\"(.*?)\"",
+  "parse_val2": ""
+}

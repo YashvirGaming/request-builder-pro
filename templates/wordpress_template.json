@@ -1,0 +1,8 @@
+{
+  "success": "token_type, jwt",
+  "failure": "incorrect_password, invalid_username",
+  "retry": "too_many_requests",
+  "parse_type": "json",
+  "parse_val1": "token",
+  "parse_val2": ""
+}

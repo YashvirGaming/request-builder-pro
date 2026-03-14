@@ -1,0 +1,8 @@
+{
+  "success": "isLoggedIn, authURL",
+  "failure": "incorrect_password, email_not_found",
+  "retry": "too_many_requests",
+  "parse_type": "json",
+  "parse_val1": "authURL",
+  "parse_val2": ""
+}

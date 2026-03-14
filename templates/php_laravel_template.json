@@ -1,0 +1,8 @@
+{
+  "success": "token, access_token",
+  "failure": "These credentials do not match, invalid",
+  "retry": "Too Many Attempts",
+  "parse_type": "json",
+  "parse_val1": "token",
+  "parse_val2": ""
+}

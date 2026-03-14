@@ -1,0 +1,8 @@
+{
+  "success": "sessionid",
+  "failure": "invalid password",
+  "retry": "too many requests",
+  "parse_type": "regex",
+  "parse_val1": "sessionid=(.*?);",
+  "parse_val2": ""
+}

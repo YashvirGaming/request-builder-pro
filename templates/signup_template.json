@@ -1,0 +1,8 @@
+{
+    "success": "account created",
+    "failure": "email already exists",
+    "retry": "try again later",
+    "parse_type": "lr",
+    "parse_val1": "user_id\":\"",
+    "parse_val2": "\""
+}

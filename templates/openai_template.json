@@ -1,0 +1,8 @@
+{
+  "success": "sess-",
+  "failure": "invalid_api_key, Incorrect API key",
+  "retry": "rate_limit_exceeded, retry_after",
+  "parse_type": "lr",
+  "parse_val1": "sess-",
+  "parse_val2": "\""
+}

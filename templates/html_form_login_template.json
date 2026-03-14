@@ -1,0 +1,8 @@
+{
+  "success": "Welcome, logout, dashboard, my account",
+  "failure": "Invalid, incorrect, wrong password, login failed",
+  "retry": "too many requests, try again",
+  "parse_type": "css",
+  "parse_val1": "input[name=_token]",
+  "parse_val2": "value"
+}

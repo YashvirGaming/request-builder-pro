@@ -1,0 +1,8 @@
+{
+  "success": "302",
+  "failure": "401",
+  "retry": "429",
+  "parse_type": "none",
+  "parse_val1": "",
+  "parse_val2": ""
+}

@@ -1,0 +1,8 @@
+{
+  "success": "account, subscription",
+  "failure": "invalid_credentials, error",
+  "retry": "rate_limit",
+  "parse_type": "json",
+  "parse_val1": "token",
+  "parse_val2": ""
+}

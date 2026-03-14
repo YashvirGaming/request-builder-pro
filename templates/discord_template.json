@@ -1,0 +1,8 @@
+{
+  "success": "token, mfa",
+  "failure": "Invalid Form Body, INVALID_LOGIN",
+  "retry": "retry_after",
+  "parse_type": "json",
+  "parse_val1": "token",
+  "parse_val2": ""
+}

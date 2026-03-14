@@ -1,0 +1,8 @@
+{
+  "success": "access_token",
+  "failure": "error, invalid_grant",
+  "retry": "rate_limit",
+  "parse_type": "json",
+  "parse_val1": "access_token",
+  "parse_val2": ""
+}

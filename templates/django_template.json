@@ -1,0 +1,8 @@
+{
+  "success": "token, key",
+  "failure": "Unable to log in, non_field_errors",
+  "retry": "throttled",
+  "parse_type": "json",
+  "parse_val1": "key",
+  "parse_val2": ""
+}
